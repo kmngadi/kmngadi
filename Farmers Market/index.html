@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!--Link to the CSS-->
+    <title>Farmers Market</title>
+
+    
+</head>
+
+<body>
+    <header>
+        <h1>Farmers Market</h1>
+    </header>
+    <nav>
+        <a href="#home" onclick="showPage('home')">Home</a>
+        <a href="#products" onclick="showPage('products')">Products</a>
+        <a href="#cart" onclick="showPage('cart')">Cart</a>
+        <a href="#login" onclick="showPage('login')">Login</a>
+        <a href="#signup" onclick="showPage('signup')">Sign Up</a>
+        <a href="#admin" onclick="showPage('admin')">Admin</a>
+    </nav>
+
+    <main>
+        <!-- Home Page -->
+        <div id="home" class="page">
+            <h2>Welcome to Farmers Market</h2>
+            <p>Find fresh products and more!</p>
+        </div>
+
+        <!-- Login Page -->
+        <div id="login" class="page" style="display:none;">
+            <h2>Login</h2>
+            <div class="login">
+                <input type="text" id="login-email" placeholder="Email">
+                <input type="password" id="login-password" placeholder="Password">
+                <button onclick="login()">Login</button>
+                <div class="auth-buttons">
+                    <button onclick="authWith('facebook')">Login with Facebook</button>
+                    <button onclick="authWith('twitter')">Login with Twitter</button>
+                    <button onclick="authWith('google')">Login with Google</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sign Up Page -->
+        <div id="signup" class="page" style="display:none;">
+            <h2>Sign Up</h2>
+            <div class="signup">
+                <input type="text" id="signup-name" placeholder="Name">
+                <input type="text" id="signup-email" placeholder="Email">
+                <input type="password" id="signup-password" placeholder="Password">
+                <button onclick="signUp()">Sign Up</button>
+                <div class="auth-buttons">
+                    <button onclick="authWith('facebook')">Sign Up with Facebook</button>
+                    <button onclick="authWith('twitter')">Sign Up with Twitter</button>
+                    <button onclick="authWith('google')">Sign Up with Google</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Page -->
+            <h1>Dashboard</h1> <!-- Product Header -->
+            <div class="product-container">
+                <div class="product-item">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h2>Product 1</h2>
+                    <p>Description of Product 1</p>
+                    <p>Price: $50</p>
+                </div>
+                <div class="product-item">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h2>Product 2</h2>
+                    <p>Description of Product 2</p>
+                    <p>Price: $65</p>
+                </div>
+                <!-- Add more product items as needed -->
+            </div>
+            
+            <!-- Add more products here -->
+        
+        </div>
+
+        <!-- Cart Page -->
+        <div id="cart" class="page" style="display:none;">
+            <h2>Your Cart</h2>
+            <div id="cart-items" class="cart"></div>
+            <p>Total: $<span id="total">0.00</span></p>
+            <button onclick="checkout()">Checkout</button>
+        </div>
+
+         <!-- Admin Page -->
+        <div id="admin" class="page" style="display:none;">
+            <h2>Admin Dashboard</h2>
+            <div class="admin-controls">
+                <h3>Manage Products</h3>
+                <button onclick="addProduct()">Add Product</button>
+                <button onclick="updateProduct()">Update Product</button>
+                <button onclick="deleteProduct()">Delete Product</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Farmers Market</p>
+    </footer>
+
+     <!--Javascript-->
+     <script src="js/script.js"></script><!--Link to the script-->
+
+</body>
+</html>

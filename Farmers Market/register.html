@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <title>User Authentication Forms</title>
+</head>
+<body>
+
+    <h2>Register Form</h2>
+    <form action="/register" method="post">
+        <div class="container">
+            <label for="newusername"><b>New Username</b></label>
+            <input type="text" placeholder="Enter New Username" name="newusername" required>
+        
+            <label for="newpassword"><b>New Password</b></label>
+            <input type="password" placeholder="Enter New Password" name="newpassword" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter Email" name="email" required>
+        
+            <button type="submit">Register</button>
+        </div>
+    </form>
+    
+    <script src="js/script.js"></script><!--Link to the script-->
+
+</body>
+</html>

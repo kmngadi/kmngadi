@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <div class="cart-items">
+        <div class="cart-item">
+            <img src="product1.jpg" alt="Product 1">
+            <div>
+                <h3>Product 1</h3>
+                <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Price: $50</p>
+                <input type="number" value="1" min="1">
+                <button>Delete</button>
+            </div>
+        </div>
+        <div class="cart-item">
+            <img src="product2.jpg" alt="Product 2">
+            <div>
+                <h3>Product 2</h3>
+                <p>Description: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <p>Price: $65</p>
+                <input type="number" value="1" min="1">
+                <button>Delete</button>
+            </div>
+        </div>
+        <!-- Add more cart items as needed -->
+    </div>
+
+    <div class="cart-summary">
+        <h2>Cart Summary</h2>
+        <p>Total Items: 2</p>
+        <p>Total Price: $115</p>
+        <button>Checkout</button>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
