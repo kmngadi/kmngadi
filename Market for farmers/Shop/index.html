@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmers Market</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="/">Farmers Market</a>
+      </div>
+      <div class="nav-items">
+        <a href="./index.html">Home</a>
+        <a href="../login/index.html">Login</a>
+        <a href="../signup/index.html">Signup</a>
+        <a href="../cart/index.html">My Cart</a>
+        <a href="../profile/index.html">My Profile</a>
+      </div>
+    </nav>
+
+    <main>
+      <aside>
+        <section>
+          <title>Categories</title>
+          <ul>
+            <li>
+              <input id="fruits" type="checkbox" name="category" />
+              <label for="fruits">Fruits</label>
+            </li>
+            <li>
+              <input id="vegetables" type="checkbox" name="category" />
+              <label for="vegetables">Vegetables</label>
+            </li>
+            <li>
+              <input id="dairy" type="checkbox" name="category" />
+              <label for="dairy">Dairy</label>
+            </li>
+            <li>
+              <input id="meats" type="checkbox" name="category" />
+              <label for="meats">Meats</label>
+            </li>
+            <li>
+              <input id="baked-goods" type="checkbox" name="category" />
+              <label for="baked-goods">Baked Goods</label>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <title>Price Range</title>
+          <ul>
+            <li>
+              <input id="0-10" type="checkbox" name="prange" class="checkers" />
+              <label for="0-10">R0 to R40</label>
+            </li>
+            <li>
+              <input id="10-20" type="checkbox" name="prange" class="checkers"/>
+              <label for="10-20">R50 to R90</label>
+            </li>
+            <li>
+              <input id="20-30" type="checkbox" name="prange" class="checkers"/>
+              <label for="20-30">R100 onwards</label>
+            </li>
+          </ul>
+          <button id="applyfilter">Apply Filter</button><br>
+          <button id="cancelfilter">Cancel Filter</button>
+        </section>
+      </aside>
+      <main-content>
+        <input type="text" placeholder="Search by Product Name or Description" id="search" />
+        <div class="filters">
+          <div class="filter active" id="all" style="background-color: black;">All</div>
+          <div class="filter" id="fruits" style="background-color: white;">Fruits</div>
+          <div class="filter" id="vegetables" style="background-color: white;">Vegetables</div>
+          <div class="filter" id="dairy" style="background-color: white;">Dairy</div>
+          <div class="filter" id="meats" style="background-color: white;">Meats</div>
+        </div>
+        <section class="cat">
+          <title>Fruits</title>
+          <div class="items">
+            <!-- Example item -->
+            <div class="item">
+              <img src="Shop/Prducts/apples.png" alt="Apples" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">40</div>
+                  <div class="weight">1,5 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/bananas.png" alt="Bananas" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R25</div>
+                  <div class="weight">1 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+
+              <div class="item">
+                <img src="Shop/Products/grapes.jpg" alt="Grapes" />
+                <div class="info">
+                  <div class="row">
+                    <div class="price">R30</div>
+                    <div class="weight">500 g</div>
+                  </div>
+                  <div class="row">Rating:</div>
+                </div>
+                <button id="addBtn">Add to Cart</button>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </section>
+
+        <section class="cat">
+          <title>Vegetables</title>
+          <div class="items">
+            <!-- items -->
+            <div class="item">
+              <img src="Shop/Products/carrots.png" alt="Carrots" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R50</div>
+                  <div class="weight">2 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/cabbage.jpg" alt="Cabbage" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R30</div>
+                  <div class="weight">1 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/spinach.jpg" alt="Spinach" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R35</div>
+                  <div class="weight">2,5 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+            <!-- Add more items as needed -->
+          </div>
+        </section>
+
+        <section class="cat">
+          <title>Dairy</title>
+          <div class="items">
+            <!-- items -->
+            <div class="item">
+              <img src="Shop/Products/milk.jpg" alt="Fresh Milk" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R20.00</div>
+                  <div class="volume">1 liter</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/cheddar cheese.jpg" alt="Cheddar Cheese" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">R60.00</div>
+                  <div class="volume">1 kg</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/mozzarella sticks.jpg" alt="Mozzarella Sticks" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">35.00</div>
+                  <div class="volume">750 g</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+
+            <div class="item">
+              <img src="Shop/Products/parmesan cheese.jpg" alt="Parmesan Cheese" />
+              <div class="info">
+                <div class="row">
+                  <div class="price">35.00</div>
+                  <div class="volume">750 g</div>
+                </div>
+                <div class="row">Rating:</div>
+              </div>
+              <button id="addBtn">Add to Cart</button>
+            </div>
+            <!-- Add more items as needed -->
+
+            <section class="cat">
+              <title>Meat</title>
+              <div class="items">
+                <!-- items -->
+                <div class="item">
+                  <img src="Shop/Products/beef chuck.jpg" alt="Beef Chunk" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R160</div>
+                      <div class="volume">5 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                  <img src="Shop/Products/beef ribs.jpg" alt="Beef Ribs" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R120</div>
+                      <div class="volume">2 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                  <img src="Shop/Products/beef rump.jpg" alt="Beef Rump" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R150</div>
+                      <div class="volume">5 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                  <img src="chicken breasts.jpg" alt="Chicken Breasts" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R110</div>
+                      <div class="volume">5 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+
+                <div class="item">
+                  <img src="chicken neck.jpg" alt="Chicken Necks" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R100</div>
+                      <div class="volume">5 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+
+                
+                <div class="item">
+                  <img src="Shop/Products/chicken wings.png" alt="Chicken Wings" />
+                  <div class="info">
+                    <div class="row">
+                      <div class="price">R150</div>
+                      <div class="volume">5 kg</div>
+                    </div>
+                    <div class="row">Rating:</div>
+                  </div>
+                  <button id="addBtn">Add to Cart</button>
+                </div>
+          </div>
+        </section>
+        </html>
+

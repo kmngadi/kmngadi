@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer's Market</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="brand">
+        <a href="../home/index.html">Farmer's Market</a>
+      </div>
+      <div class="nav-items">
+        <a href="./index.html">Home</a>
+        <a href="../login/index.html">Login</a>
+        <a href="../signup/index.html">Signup</a>
+        <a href="../profile/index.html">My Profile</a>
+      </div>
+    </nav>
+    <p id="head">Market Cart</p>
+    <main>
+      <main-content>
+        <div class="item">
+          <img src="apple.png" alt="Apple" />
+          <div class="info">
+            <div class="row">
+              <div class="price">$2.00 per lb</div>
+              <div class="quantity">Available: 10 lbs</div>
+            </div>
+            <div class="colors">
+              Varieties:
+              <div class="row">
+                <div class="circle" style="background-color: #ff0000"></div>
+                <div class="circle" style="background-color: #00ff00"></div>
+              </div>
+            </div>
+            <div class="row">Rating:</div>
+          </div>
+          <button id="addBtn">Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="carrot.png" alt="Carrot" />
+          <div class="info">
+            <div class="row">
+              <div class="price">$1.50 per lb</div>
+              <div class="quantity">Available: 5 lbs</div>
+            </div>
+            <div class="colors">
+              Varieties:
+              <div class="row">
+                <div class="circle" style="background-color: #ff8c00"></div>
+                <div class="circle" style="background-color: #ff4500"></div>
+              </div>
+            </div>
+            <div class="row">Rating:</div>
+          </div>
+          <button id="addBtn">Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="lettuce.png" alt="Lettuce" />
+          <div class="info">
+            <div class="row">
+              <div class="price">$3.00 per head</div>
+              <div class="quantity">Available: 8 heads</div>
+            </div>
+            <div class="colors">
+              Varieties:
+              <div class="row">
+                <div class="circle" style="background-color: #9acd32"></div>
+                <div class="circle" style="background-color: #006400"></div>
+              </div>
+            </div>
+            <div class="row">Rating:</div>
+          </div>
+          <button id="addBtn">Add to Cart</button>
+        </div>
+        <div class="item">
+          <img src="tomato.png" alt="Tomato" />
+          <div class="info">
+            <div class="row">
+              <div class="price">$2.50 per lb</div>
+              <div class="quantity">Available: 12 lbs</div>
+            </div>
+            <div class="colors">
+              Varieties:
+              <div class="row">
+                <div class="circle" style="background-color: #ff6347"></div>
+                <div class="circle" style="background-color: #ff4500"></div>
+              </div>
+            </div>
+            <div class="row">Rating:</div>
+          </div>
+          <button id="addBtn">Add to Cart</button>
+        </div>
+      </main-content>
+      <right>
+        <p id="check">Checkout List</p>
+        <div class="checkitems">
+          <!-- This will be populated dynamically -->
+        </div> 
+      </right>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
