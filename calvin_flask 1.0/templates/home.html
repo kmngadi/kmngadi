@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Farmers Market</title>
+    <style>
+        body { 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        justify-content: center;
+        background-image: url('https://www.wallpapertip.com/wmimgs/24-249670_high-resolution-wooden-background-hd.jpg'),
+         linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.8));
+        background-blend-mode: soft-light;
+        color: #333;
+        align-items: center;
+        height: 100vh;
+}
+        header {
+            background-color: #8B4513;
+            color: white;
+            padding: 1em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .search-bar {
+            display: flex;
+        }
+        .search-bar input {
+            padding: 0.5em;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            background-color: #DAA520;
+            color: white;
+            border: none;
+            padding: 0.5em 1em;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+        }
+        .user-actions a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1em;
+        }
+        nav {
+            background-color: #DAA520;
+            padding: 0.5em;
+            text-align: center;
+        }
+        .nav-button {
+            background-color: #DAA520;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #8B4513;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2em;
+            background-color: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #8B4513;
+            text-align: center;
+        }
+        #products {
+            display: block; /* Make products visible */
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product-card {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .add-to-cart {
+            background-color: #DAA520;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: #8B4513;
+        }
+        #cart {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .review {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .auth-form {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        .auth-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .auth-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #8B4513;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<header>
+<div class="logo">Farmer</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button>Search</button>
+        </div>
+        <div class="user-actions">
+            <a href="#" onclick="showPage('auth')">Sign In</a>
+            <a href="#" id="cart-icon">Cart (0)</a>
+        </div>
+    </header>
+</body>
+
+    <nav>
+        <button class="nav-button" onclick="showPage('home')">Home</button>
+        <button class="nav-button" onclick="showPage('about')">About</button>
+        <button class="nav-button" onclick="showPage('services')">Services</button>
+        <button class="nav-button" onclick="showPage('products')">Shop</button>
+        <button class="nav-button" onclick="showPage('contact')">Contact</button>
+        <button class="nav-button" onclick="location.href='{{ url_for() }}'">Sign In</button> <!--Error. Removed signin url-->
+    </nav>
+
+
+
+    <div id="home" class="content">
+        <h2>Welcome to Our Farmers Market</h2>
+        <p>Experience the freshness of local produce and the warmth of our community at our farmers market. We're dedicated to bringing you the best locally-sourced fruits, vegetables, and artisanal products.</p>
+    </div>
+
+    <div id="about" class="content" style="display:none;">
+        <p>Our farmers market has been a cornerstone of the community for over 20 years. We believe in supporting local farmers and artisans while providing our customers with the freshest, highest-quality produce and goods.</p>
+        <p>Our mission is to create a sustainable local food system and foster connections between producers and consumers.</p>
+        <a href="https://th.bing.com/th/id/OIP.Z8MQVPcu5Y22bdS67uRPmQHaE_?rs=1&pid=ImgDetMain" target="_blank">
+            <img src="C:\Users\MDIHub\Desktop\calvin_flask\templates\images\farmers.jpg" alt="Farmers" style="width:100px; height:100px; margin: 50px;">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.zojKfvnzgZj24geilAADwAHaFj?w=264&h=198&c=7&r=0&o=5&pid=1.7" target="_blank">
+            <img src="C:\Users\MDIHub\Desktop\calvin_flask\templates\images\produce.jpg" alt="Produce" style="width:100px; height:100px; margin:50px;">
+        </a>
+        <a href="https://th.bing.com/th/id/OIP.eFQy85xeNMABvTC4Yh_6AwAAAA?rs=1&pid=ImgDetMain" target="_blank">
+            <img src="C:\Users\MDIHub\Desktop\calvin_flask\templates\images\community1.jpg" alt="Community" style="width:100px; height:100px; margin:50px;">
+        </a>
+    </div>
+    
+    
+    <div id="services" class="content" style="display:none;">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Weekly market events featuring local vendors</li> <br>
+            <li>Seasonal produce subscription boxes</li> <br>
+            <li>Educational workshops on sustainable farming and cooking</li> <br>
+            <li>Community supported agriculture (CSA) programs</li> <br>
+            <li>Online marketplace for convenient shopping</li> <br>
+        </ul>
+    </div>
+
+    <div id="products" class="content" style="display:none;">
+        <h2>Our Products</h2>
+
+        <section>
+            <div class="product-card">
+                <img src="C:\Users\MDIHub\Desktop\calvin_flask\templates\Products\apples.png" alt="Apples">
+                <h3>Apples</h3>
+                <p>Sweet and juicy apples from our own farm</p>
+                <p>Price: R20/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Apples', 20)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Products/bananas.png" alt="Bananas">
+                <h3>Bananas</h3>
+                <p>Freshly packed yellow bananas</p>
+                <p>Price: R20/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Bananas', 20)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Products/beef chuck.jpg" alt="Beef Chuck">
+                <h3>Beef Chunck</h3>
+                <p>Beefy meaty beef chuck cuts by our own butchers</p>
+                <p>Price: R50/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Beef Chuck', 50)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Products/beef ribs.jpg" alt="Beef Ribs">
+                <h3>Beef Ribs</h3>
+                <p>The freshness of the product ("farm-fresh")</p>
+                <p>Price: R70/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Beef Ribs', 70)">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Products/cabbage.jpg" alt="Cabbage ">
+                <h3>Cabbage</h3>
+                <p>Farm-Fresh" indicates the cabbage's quality and recent harvest.</p>
+                <p>Price: R15/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Cabbage', 15)">Add to Cart</button>
+            </div>
+            <div class="item">
+                <img src="Products/carrots.png" alt="">
+                <h3>Rainbow Carrots</h3>
+                <p>The bright, vibrant flavor associated with garden-fresh produce</p>
+                <p>Price: R25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Rainbow Carrots', 25)">Add to Cart</button>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <div id="reviews" class="content" style="display:none;">
+        <h2>Customer Reviews</h2>
+        <div id="review-list">
+            <!-- Reviews will be dynamically added here -->
+        </div>
+        <h3>Leave a Review</h3>
+        <form id="review-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+            <label for="rating">Rating (1-5):</label>
+            <input type="number" id="rating" min="1" max="5" required><br>
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea><br>
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+    <div id="contact" class="content" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Get in touch with us for any questions, suggestions, or if you're interested in becoming a vendor.</p>
+        <p>Email: info@ourfarmersmarket.com</p>
+        <p>Phone: (000) 123-4567</p>
+        <p>Address: 123 Market Street, Farmville, State 12345</p>
+    </div>
+
+    <div id="auth" class="content" style="display:none;">
+        <h2>Login</h2>
+        <form id="login-form" class="auth-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+
+        <h2>Sign Up</h2>
+        <form id="signup-form" class="auth-form">
+            <input type="text" id="signup-name" placeholder="Full Name" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script>
+        let cart = [];
+
+        function showPage(pageId) {
+            document.querySelectorAll('.content').forEach(el => el.style.display = 'none');
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        function addToCart(productName, price) {
+        // For demonstration, we're using an alert. This can be replaced with actual cart logic.
+        alert(`${productName} has been added to your cart at a price of ${price}.`);
+    }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const cartTotal = document.getElementById('cart-total');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            cartTotal.textContent = total.toFixed(2);
+        }
+
+        document.getElementById('review-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const rating = document.getElementById('rating').value;
+            const comment = document.getElementById('comment').value;
+            addReview(name, rating, comment);
+            this.reset();
+        });
+
+        function addReview(name, rating, comment) {
+            const reviewList = document.getElementById('review-list');
+            const review = document.createElement('div');
+            review.className = 'review';
+            review.innerHTML = `
+                <h4>${name} - Rating: ${rating}/5</h4>
+                <p>${comment}</p>
+            `;
+            reviewList.appendChild(review);
+        }
+
+        // Add some initial reviews
+        addReview('John Doe', 5, 'Great produce and friendly service!');
+        addReview('Jane Smith', 4, 'Love the variety of organic vegetables.');
+
+        // Handle login form submission
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            console.log('Login attempt:', email, password);
+            // Here you would typically send these credentials to a server for verification
+            alert('Login functionality would be implemented here.');
+            showPage('home');
+        });
+
+        // Handle signup form submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('signup-name').value;
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            console.log('Signup attempt:', name, email, password);
+            // Here you would typically send this information to a server to create a new account
+            alert('Sign up functionality would be implemented here.');
+            showPage('home');
+        });
+    </script>
+</body>
+</html>
