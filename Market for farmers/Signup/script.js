@@ -27,8 +27,24 @@ const firebaseConfig = {
 }
 const auth = firebase.auth();
 function SignIn(){
-var email = document.getElementById('email').value;
+var email = document.getElementById('eemail').value;
 var password = document.getElementById('password').value;
+const promise = auth.signinWithEmailAndPassword(email, password);
+promise.catch(e =>alert(e.msg));
+window.open("https://www.google.com","_self");;
 }
-   
-   
+document.getElementById('form').addEventListener('submit',(e) =>{
+e.preventDefaut();
+var userInfo = datab.push();
+userInfo.set({
+   name:getId('fname'),
+   email:getId('eemail'),
+   password:getId('password')
+});
+alert("Successfully Signed Up!");
+console.alert("sent");
+document.getElementById("form").reset();
+})
+function getId(id){
+    return document.getElementById(id).value;
+}

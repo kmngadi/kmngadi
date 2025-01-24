@@ -8,12 +8,12 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(to right, #2E7D32 0%, #FAFAFA 100%);
   overflow-x: hidden;
-  background-color: #f8f9f2; /* Light background color for a rustic feel */
 }
 
 a {
-  color: #4CAF50; /* Green color for links to reflect freshness */
+  color: #4CAF50; 
   text-decoration: none;
 }
 

@@ -1,4 +1,4 @@
-/* Reset styles */
+
 * {
   padding: 0;
   margin: 0;
@@ -8,11 +8,12 @@
 /* General body styles */
 body {
   font-family: "Inter", sans-serif;
+  background-image: linear-gradient(to right, #2E7D32 0%, #FAFAFA 100%);
   overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full viewport height for vertical centering */
+  height: 100vh; 
 }
 
 /* Navigation bar styles */
@@ -26,17 +27,17 @@ nav {
   top: 0;
   background-color: black;
   border-bottom: 1px solid white;
-  padding: 0.75rem 1.5rem; /* Reduced padding for a more compact nav */
-  font-size: 0.875rem; /* Reduced font size */
+  padding: 0.75rem 1.5rem; 
+  font-size: 0.875rem; 
 }
 
 nav .brand {
-  font-size: 1.25rem; /* Slightly smaller font size */
+  font-size: 1.25rem; 
   font-weight: bold;
 }
 
 nav .nav-items a {
-  margin: 0 0.75rem; /* Reduced margin */
+  margin: 0 0.75rem; 
 }
 
 a {
@@ -47,26 +48,26 @@ a {
 a:hover {
   background-color: #3e8e41;
   color: white;
-  border-radius: 5px; /* Reduced border-radius for a subtler effect */
+  border-radius: 5px; 
 }
 
 /* Heading and description styles */
 #heading {
   color: #000;
   font-family: Inter;
-  font-size: 2.5rem; /* Reduced font size */
+  font-size: 2.5rem; 
   font-weight: 400;
-  text-align: center; /* Center text */
-  margin-bottom: 1rem; /* Reduced margin-bottom */
+  text-align: center; 
+  margin-bottom: 1rem; 
 }
 
 #desc {
   color: #000;
   font-family: Inter;
-  font-size: 1.25rem; /* Reduced font size */
+  font-size: 1.25rem; 
   font-weight: 400;
-  text-align: center; /* Center text */
-  margin-bottom: 2rem; /* Adjust margin-bottom */
+  text-align: center; 
+  margin-bottom: 2rem; 
 }
 
 /* Button styles */
@@ -74,15 +75,15 @@ a:hover {
   background-color: #000;
   color: white;
   font-family: Inter;
-  font-size: 1rem; /* Reduced font size */
-  padding: 0.5rem 1rem; /* Adjusted padding for smaller buttons */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Added border-radius for modern look */
-  cursor: pointer; /* Added cursor pointer for better UX */
-  width: 100%; /* Full width of the container */
-  max-width: 150px; /* Set a max-width to prevent buttons from getting too wide */
-  display: block; /* Ensures buttons are block-level elements for width control */
-  margin: 0.5rem auto; /* Center buttons horizontally */
+  font-size: 1rem;
+  padding: 0.5rem 1rem; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  width: 100%; 
+  max-width: 150px; 
+  display: block; 
+  margin: 0.5rem auto; 
 }
 
 #login:hover, #signup:hover {
@@ -94,54 +95,54 @@ a:hover {
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center contents horizontally */
-  justify-content: center; /* Center contents vertically */
-  padding: 2rem; /* Adjusted padding */
-  background: #fff; /* Optional: to enhance the visibility of the content */
-  border-radius: 8px; /* Optional: rounded corners for the container */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  align-items: center; 
+  justify-content: center; 
+  padding: 2rem; 
+  background: #fff; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Top section styles */
 .top {
-  text-align: center; /* Center text and elements */
-  margin-bottom: 2rem; /* Adjusted margin-bottom */
+  text-align: center; 
+  margin-bottom: 2rem; 
 }
 
 .top > p {
-  margin-bottom: 1rem; /* Adjusted margin-bottom */
+  margin-bottom: 1rem; 
 }
 
 /* Bottom section styles */
 .bottom {
-  text-align: center; /* Center text and elements */
+  text-align: center; 
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 650px) {
   .nav-items {
-      font-size: 0.75rem; /* Reduced font size for smaller screens */
+      font-size: 0.75rem; 
   }
 
   .brand a {
-      font-size: 1rem; /* Adjusted font size for smaller screens */
+      font-size: 1rem; 
   }
 
   #login, #signup {
-      width: 100%; /* Full width on smaller screens */
-      max-width: none; /* Remove max-width restriction */
-      padding: 0.75rem; /* Adjusted padding for better fit */
+      width: 100%; 
+      max-width: none;
+      padding: 0.75rem; 
   }
 
   #heading {
-      font-size: 2rem; /* Adjusted font size for smaller screens */
+      font-size: 2rem; 
   }
 
   #desc {
-      font-size: 1rem; /* Adjusted font size for smaller screens */
+      font-size: 1rem; 
   }
 
   .bottom img {
-      width: 100%; /* Full width of the container */
+      width: 100%; 
   }
 }

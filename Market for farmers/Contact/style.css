@@ -1,5 +1,6 @@
 body {
     font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to right, #2E7D32 0%, #FAFAFA 100%);
     margin: 0;
     padding: 0;
 }

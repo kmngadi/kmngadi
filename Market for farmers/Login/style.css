@@ -8,6 +8,7 @@
 /* General body styles */
 body {
   font-family: "Inter", sans-serif;
+  background-image: linear-gradient(to right, #2E7D32 0%, #FAFAFA 100%);
   overflow-x: hidden;
   width: 100vw;
   height: 100vh;
@@ -27,17 +28,17 @@ nav {
   top: 0;
   background-color: black;
   border-bottom: 1px solid white;
-  padding: 0.75rem 1.5rem; /* Adjusted padding */
-  font-size: 0.875rem; /* Reduced font size */
+  padding: 0.75rem 1.5rem; 
+  font-size: 0.875rem; 
 }
 
 nav .brand {
-  font-size: 1.25rem; /* Slightly smaller font size */
+  font-size: 1.25rem; 
   font-weight: bold;
 }
 
 nav .nav-items a {
-  margin: 0 0.75rem; /* Reduced margin */
+  margin: 0 0.75rem; 
 }
 
 a {
@@ -48,18 +49,18 @@ a {
 a:hover {
   background-color: #3e8e41;
   color: white;
-  border-radius: 5px; /* Subtle border-radius */
+  border-radius: 5px; 
 }
 
 /* Container styles */
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center contents horizontally */
-  padding: 2rem; /* Adjusted padding */
-  background: #fff; /* Optional: to enhance visibility */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+  align-items: center; 
+  padding: 2rem; 
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Form styles */
@@ -74,22 +75,22 @@ form {
 .message {
   color: #000;
   font-family: Inter;
-  font-size: 1.5rem; /* Reduced font size */
+  font-size: 1.5rem; 
   font-weight: 400;
-  text-align: center; /* Center text */
-  margin-bottom: 1rem; /* Adjusted margin-bottom */
+  text-align: center; 
+  margin-bottom: 1rem; 
 }
 
 /* Input styles */
 input {
   color: #000;
   font-family: Inter;
-  font-size: 1rem; /* Reduced font size */
-  padding: 0.75rem; /* Adjusted padding */
-  margin-bottom: 1rem; /* Adjusted margin-bottom */
+  font-size: 1rem; 
+  padding: 0.75rem; 
+  margin-bottom: 1rem; 
   border: solid 1px black;
-  border-radius: 4px; /* Added border-radius for modern look */
-  width: 100%; /* Full width of the form */
+  border-radius: 4px; 
+  width: 100%; 
 }
 
 /* Button styles */
@@ -97,15 +98,15 @@ input {
   color: #FFF;
   text-align: center;
   font-family: Inter;
-  font-size: 1rem; /* Reduced font size */
+  font-size: 3rem; /* Reduced font size */
   background-color: #000;
-  padding: 0.75rem; /* Adjusted padding */
-  margin-top: 1rem; /* Adjusted margin-top */
-  border: none; /* Remove default border */
-  border-radius: 4px; /* Added border-radius */
-  cursor: pointer; /* Pointer cursor for better UX */
-  width: 100%; /* Full width of the form */
-  max-width: 150px; /* Max width to keep button proportional */
+  padding: 0.75rem; 
+  margin-top: 2rem; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  width: 100%;
+  max-width: 150px; 
 }
 
 #btn:hover {
@@ -114,27 +115,27 @@ input {
 
 /* Dynamic text styles */
 .dynamic {
-  margin-top: 1rem; /* Adjusted margin-top */
-  font-size: 1rem; /* Reduced font size */
+  margin-top: 1rem; 
+  font-size: 1rem; 
   color: purple;
 }
 
 /* Responsive adjustments */
 @media screen and (max-width: 650px) {
   .nav-items {
-      font-size: 0.75rem; /* Adjusted font size */
+      font-size: 0.75rem; 
   }
 
   .brand a {
-      font-size: 1rem; /* Adjusted font size */
+      font-size: 1rem; 
   }
 
   input {
-      margin-bottom: 1.5rem; /* Adjusted margin-bottom */
+      margin-bottom: 1.5rem;
   }
 
   #btn {
-      width: 100%; /* Full width on smaller screens */
-      max-width: none; /* Remove max-width restriction */
+      width: 100%; 
+      max-width: none; 
   }
 }
